@@ -14,7 +14,7 @@
     <message>
         <location filename="../qml/pages/CustomNotePage.qml" line="16"/>
         <location filename="../qml/pages/CustomNotePage.qml" line="37"/>
-        <location filename="../qml/pages/CustomNotePage.qml" line="50"/>
+        <location filename="../qml/pages/CustomNotePage.qml" line="45"/>
         <source>Save</source>
         <translation>Tallennus</translation>
     </message>

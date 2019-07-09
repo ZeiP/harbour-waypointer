@@ -27,7 +27,7 @@ bool Waypoints::saveWaypoints(QString name) {
     QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
     QString subDir = "Waypointer";
     QString filename;
-    filename = waypoints.at(0).time.toUTC().toString(Qt::ISODate) + " - " + name + ".gpx";
+    filename = waypoints.at(0).time.toString(Qt::ISODate) + " - " + name + ".gpx";
     qDebug()<<"File:"<<homeDir<<"/"<<subDir<<"/"<<filename;
 
     QDir home = QDir(homeDir);

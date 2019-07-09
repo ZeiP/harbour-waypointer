@@ -15,6 +15,7 @@ ApplicationWindow
     allowedOrientations: defaultAllowedOrientations
 
     property string lastLog: qsTr("Nothing logged");
+    property string saveName;
 
     ListModel {
         id: rootTexts

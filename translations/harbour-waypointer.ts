@@ -18,6 +18,18 @@
         <source>Note text</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Location to use</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select if you want to record the waypoint using the location when the button was pressed or the location when you accept this dialog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Button</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LoggingPage</name>
@@ -31,6 +43,10 @@
     </message>
     <message>
         <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Custom text</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -17,6 +17,7 @@ Dialog {
                 label: qsTr("Route name")
                 placeholderText: qsTr("Route name")
                 focus: true
+                text: saveName
 
                 EnterKey.enabled: text.length > 0
                 EnterKey.iconSource: "image://theme/icon-m-enter-accept"
@@ -27,6 +28,7 @@ Dialog {
     }
     onDone: {
         if (result == DialogResult.Accepted) {
+            saveName = nameField.text;
             waypoints.saveWaypoints(nameField.text);
         }
     }

@@ -37,9 +37,9 @@ Page {
                 title: qsTr("Waypointer")
             }
             Button {
-                text: "Custom text"
+                text: qsTr("Custom text")
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("CustomNotePage.qml"))
+                    pageStack.push(Qt.resolvedUrl("CustomNotePage.qml"), {coordinate: positionSource.position.coordinate})
                 }
             }
 

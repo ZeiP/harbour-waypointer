@@ -36,40 +36,42 @@ Page {
             PageHeader {
                 title: qsTr("Waypointer")
             }
-            Button {
-                text: qsTr("Custom text")
-                onClicked: {
-                    pageStack.push(Qt.resolvedUrl("CustomNotePage.qml"), {coordinate: positionSource.position.coordinate})
+            ButtonLayout {
+                Button {
+                    text: qsTr("Custom text")
+                    onClicked: {
+                        pageStack.push(Qt.resolvedUrl("CustomNotePage.qml"), {coordinate: positionSource.position.coordinate})
+                    }
                 }
-            }
-
-            ColumnView {
-                id: presetButtons
-                width: parent.width
-                itemHeight: Theme.itemSizeSmall
-
-                model: rootTexts;
-
-                Component.onCompleted: {
-                    rootTexts.updateValues();
+                Button {
+                    text: qsTr("Cancel last")
+                    onClicked: {
+                        lastLog = waypoints.removeLastWaypoint();
+                    }
                 }
 
-                delegate: BackgroundItem {
-                    width: parent.width
+                Repeater {
+                    model: rootTexts;
+                    Component.onCompleted: {
+                        rootTexts.updateValues();
+                    }
+
                     Button {
                         text: model.text
+                        width: parent.width
                         onClicked: {
                             lastLog = waypoints.addWaypoint(this.text, positionSource.position.coordinate);
                         }
                     }
                 }
             }
+
             Label {
                 id: lastLogLabel
                 x: Theme.horizontalPageMargin
                 text: mainWindow.lastLog
-                color: Theme.secondaryHighlightColor
-                font.pixelSize: Theme.fontSizeSmall
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeMedium
             }
         }
     }

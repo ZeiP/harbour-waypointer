@@ -49,6 +49,10 @@
         <source>Custom text</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Cancel last</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SavePage</name>

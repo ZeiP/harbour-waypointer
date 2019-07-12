@@ -21,6 +21,19 @@ QString Waypoints::addWaypoint(QString description, QGeoCoordinate pos) {
   return waypoint.name + "@" + waypoint.time.toString("hh.mm.ss");
 }
 
+QString Waypoints::removeLastWaypoint() {
+  if (waypoints.isEmpty()) {
+    return "";
+  }
+  waypoints.removeLast();
+  if (waypoints.isEmpty()) {
+    return "";
+  }
+  waypoint waypoint;
+  waypoint = waypoints.last();
+  return waypoint.name + "@" + waypoint.time.toString("hh.mm.ss");
+}
+
 bool Waypoints::saveWaypoints(QString name) {
     // Used the Rena save code (GPLv3)
     // https://github.com/Simoma/rena/blob/master/src/trackrecorder.cpp

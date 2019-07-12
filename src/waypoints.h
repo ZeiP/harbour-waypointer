@@ -12,6 +12,7 @@ class Waypoints : public QObject
 public:
     explicit Waypoints(QObject *parent = nullptr);
     Q_INVOKABLE QString addWaypoint(QString description, QGeoCoordinate pos);
+    Q_INVOKABLE QString removeLastWaypoint();
     Q_INVOKABLE bool saveWaypoints(QString name);
 
 signals:

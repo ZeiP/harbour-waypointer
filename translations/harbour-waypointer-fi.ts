@@ -58,9 +58,14 @@
         <translation>Reittipisteet</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoggingPage.qml" line="40"/>
+        <location filename="../qml/pages/LoggingPage.qml" line="41"/>
         <source>Custom text</source>
         <translation>Muu teksti</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/LoggingPage.qml" line="47"/>
+        <source>Cancel last</source>
+        <translation>Peru viimeisin</translation>
     </message>
 </context>
 <context>

@@ -46,7 +46,13 @@ Page {
                 Button {
                     text: qsTr("Cancel last")
                     onClicked: {
-                        lastLog = waypoints.removeLastWaypoint();
+                        console.log(settings.noConfirmCancel);
+                        if (!settings.noConfirmCancel) {
+                            pageStack.push(Qt.resolvedUrl("CancelConfirmation.qml"));
+                        }
+                        else {
+                            lastLog = waypoints.removeLastWaypoint();
+                        }
                     }
                 }
 

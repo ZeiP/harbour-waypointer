@@ -28,7 +28,8 @@ DISTFILES += qml/harbour-waypointer.qml \
     qml/pages/SettingsPage.qml \
     qml/pages/LoggingPage.qml \
     qml/pages/SavePage.qml \
-    qml/pages/CustomNotePage.qml
+    qml/pages/CustomNotePage.qml \
+    qml/pages/CancelConfirmation.qml
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 

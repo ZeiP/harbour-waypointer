@@ -7,4 +7,5 @@ ConfigurationGroup {
     path: "/apps/harbour-waypointer"
 
     property string values
+    property bool noConfirmCancel
 }

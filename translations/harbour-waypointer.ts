@@ -2,6 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>CancelConfirmation</name>
+    <message>
+        <source>Remove last waypoint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you really want to remove the last waypoint %1?</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CoverPage</name>
     <message>
         <source>Waypointer</source>
@@ -73,6 +84,18 @@
     </message>
     <message>
         <source>Preset texts one per line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Don&apos;t confirm before cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preset texts one per line. The buttons are usually best aligned with an even number of presets.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -18,7 +18,7 @@ QString Waypoints::addWaypoint(QString description, QGeoCoordinate pos) {
   waypoint.lon = pos.longitude();
   waypoint.time = QDateTime::currentDateTime();
   waypoints.append(waypoint);
-  return waypoint.name + "@" + waypoint.time.toString("hh.mm.ss");
+  return getLastlog();
 }
 
 QString Waypoints::removeLastWaypoint() {
@@ -26,11 +26,17 @@ QString Waypoints::removeLastWaypoint() {
     return "";
   }
   waypoints.removeLast();
+  return getLastlog();
+}
+
+QString Waypoints::getLastlog() {
+  // FIXME: addWaypoint could just pass on the just appended waypoint as an argument.
   if (waypoints.isEmpty()) {
-    return "";
+    return "–";
   }
   waypoint waypoint;
   waypoint = waypoints.last();
+
   return waypoint.name + "@" + waypoint.time.toString("hh.mm.ss");
 }
 

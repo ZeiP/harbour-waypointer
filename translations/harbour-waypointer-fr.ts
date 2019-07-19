@@ -5,7 +5,7 @@
     <name>CancelConfirmation</name>
     <message>
         <source>Remove last waypoint</source>
-        <translation>Enlever le dernier repère</translation>
+        <translation>Enlever</translation>
     </message>
     <message>
         <source>Do you really want to remove the last waypoint %1?</source>
@@ -88,7 +88,7 @@
     </message>
     <message>
         <source>Don&apos;t confirm before cancel</source>
-        <translation>N&apos;acceptez pas avant d&apos;annuler</translation>
+        <translation>Ne pas confirmer avant annulation</translation>
     </message>
     <message>
         <source>Preset texts one per line. The buttons are usually best aligned with an even number of presets.</source>
@@ -103,7 +103,7 @@
     <name>harbour-waypointer</name>
     <message>
         <source>Nothing logged</source>
-        <translation>Rien enregistré</translation>
+        <translation>Aucun enregistrement</translation>
     </message>
 </context>
 </TS>

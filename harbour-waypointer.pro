@@ -44,6 +44,7 @@ QT += positioning
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-waypointer-fi.ts
+TRANSLATIONS += translations/harbour-waypointer-fr.ts
 
 HEADERS += \
     src/waypoints.h

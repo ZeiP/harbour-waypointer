@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>CancelConfirmation</name>
     <message>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>Select if you want to record the waypoint using the location when the button was pressed or the location when you accept this dialog.</source>
-        <translation>Sélectionnez si vous souhaitez enregistrer le repère en utilisant l'emplacement au moment où vous avez appuyé sur le bouton ou l'emplacement au moment d'accepter cette confirmation</translation>
+        <translation>Sélectionnez si vous souhaitez enregistrer le repère en utilisant l&apos;emplacement au moment où vous avez appuyé sur le bouton ou l&apos;emplacement au moment d&apos;accepter cette confirmation</translation>
     </message>
     <message>
         <source>Button</source>
@@ -88,15 +88,15 @@
     </message>
     <message>
         <source>Don&apos;t confirm before cancel</source>
-        <translation>N'acceptez pas avant d'annuler</translation>
+        <translation>N&apos;acceptez pas avant d&apos;annuler</translation>
     </message>
     <message>
         <source>Preset texts one per line. The buttons are usually best aligned with an even number of presets.</source>
-        <translation>Textes prédéfinis un par ligne. Les boutons s'alignent mieux avec un nombre pair de textes prédéfinis.</translation>
+        <translation>Textes prédéfinis un par ligne. Les boutons s&apos;alignent mieux avec un nombre pair de textes prédéfinis.</translation>
     </message>
     <message>
         <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
-        <translation>Si sélectionné, aucune confirmation ne s'affichera avant que le dernier repère ne soit enlevé avec le bouton d'annulation</translation>
+        <translation>Si sélectionné, aucune confirmation ne s&apos;affichera avant que le dernier repère ne soit enlevé avec le bouton d&apos;annulation</translation>
     </message>
 </context>
 <context>

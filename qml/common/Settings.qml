@@ -8,4 +8,5 @@ ConfigurationGroup {
 
     property string values
     property bool noConfirmCancel
+    property int horizontalAccuracyLimit
 }

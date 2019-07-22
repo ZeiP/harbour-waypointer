@@ -16,6 +16,7 @@ ApplicationWindow
 
     property string lastLog: qsTr("Nothing logged");
     property string saveName;
+    property string locationAccuracyText;
 
     ListModel {
         id: rootTexts
@@ -48,6 +49,20 @@ ApplicationWindow
         }
         Component.onCompleted: {
             positionSource.start();
+        }
+    }
+
+    function locationValid() {
+        var locationAccuracy = positionSource.position.horizontalAccuracy;
+        var accuracyText = (locationAccuracy == -1 ? "—" : locationAccuracy.toFixed(2));
+        locationAccuracyText = qsTr("Accuracy: %1 m").arg(accuracyText)
+        if (locationAccuracy >= 0 && locationAccuracy < settings.horizontalAccuracyLimit) {
+            console.log("Valid")
+            return true;
+        }
+        else {
+            console.log("Invalid")
+            return false;
         }
     }
 }

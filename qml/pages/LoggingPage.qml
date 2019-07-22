@@ -7,6 +7,8 @@ Page {
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
+    property bool lastEnabledStatus: true;
+
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
         anchors.fill: parent
@@ -33,11 +35,36 @@ Page {
 
             width: page.width
             spacing: Theme.paddingLarge
+
+            Timer {
+                interval: 2000
+                running: true
+                repeat: true
+                onTriggered: {
+                    if (locationValid()) {
+                        if (lastEnabledStatus == false) {
+                            btnCustomText.enabled = true;
+                            btnRepeater.setStatuses(true);
+                            lastEnabledStatus = true;
+                        }
+                    }
+                    else {
+                        if (lastEnabledStatus == true) {
+                            btnCustomText.enabled = false;
+                            btnRepeater.setStatuses(false);
+                            lastEnabledStatus = false;
+                        }
+                    }
+                }
+            }
+
             PageHeader {
                 title: qsTr("Waypointer")
             }
+
             ButtonLayout {
                 Button {
+                    id: btnCustomText
                     text: qsTr("Custom text")
                     onClicked: {
                         pageStack.push(Qt.resolvedUrl("CustomNotePage.qml"), {coordinate: positionSource.position.coordinate})
@@ -57,10 +84,8 @@ Page {
                 }
 
                 Repeater {
+                    id: btnRepeater
                     model: rootTexts;
-                    Component.onCompleted: {
-                        rootTexts.updateValues();
-                    }
 
                     Button {
                         text: model.text
@@ -69,15 +94,36 @@ Page {
                             lastLog = waypoints.addWaypoint(this.text, positionSource.position.coordinate);
                         }
                     }
+
+                    Component.onCompleted: {
+                        rootTexts.updateValues();
+                    }
+
+                    function setStatuses(status) {
+                        for (var i = 0; i < btnRepeater.count; i++) {
+                            var button = btnRepeater.itemAt(i);
+                            button.enabled = status;
+                        }
+                    }
                 }
             }
 
-            Label {
-                id: lastLogLabel
+            Row {
                 x: Theme.horizontalPageMargin
-                text: mainWindow.lastLog
-                color: Theme.highlightColor
-                font.pixelSize: Theme.fontSizeMedium
+                spacing: 20
+
+                Label {
+                    id: lastLogLabel
+                    text: mainWindow.lastLog
+                    color: Theme.highlightColor
+                    font.pixelSize: Theme.fontSizeMedium
+                }
+                Label {
+                    id: locationAccuracyLabel
+                    text: mainWindow.locationAccuracyText
+                    color: Theme.secondaryColor
+                    font.pixelSize: Theme.fontSizeSmall
+                }
             }
         }
     }

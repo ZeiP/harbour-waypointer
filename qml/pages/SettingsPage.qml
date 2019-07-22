@@ -11,6 +11,16 @@ Dialog {
             DialogHeader {
                 acceptText: qsTr("Save")
             }
+            Slider {
+                id: horizontalAccuracyLimitField
+                width: parent.width
+                minimumValue: 1
+                maximumValue: 100
+                value: settings.horizontalAccuracyLimit
+                stepSize: 1
+                valueText: value + " m"
+                label: qsTr("Minimum horizontal accuracy")
+            }
             TextArea {
                 id: valueField
                 width: parent.width
@@ -31,6 +41,7 @@ Dialog {
         if (result == DialogResult.Accepted) {
             settings.values = valueField.text;
             settings.noConfirmCancel = noConfirmCancel.checked;
+            settings.horizontalAccuracyLimit = horizontalAccuracyLimitField.value
             rootTexts.updateValues();
         }
     }

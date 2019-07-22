@@ -49,11 +49,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Waypointer</source>
+        <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save</source>
+        <source>Waypointer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -98,11 +98,19 @@
         <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Minimum horizontal accuracy</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>harbour-waypointer</name>
     <message>
         <source>Nothing logged</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accuracy: %1 m</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

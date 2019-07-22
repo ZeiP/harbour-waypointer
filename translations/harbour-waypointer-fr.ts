@@ -49,12 +49,12 @@
         <translation>Paramètres</translation>
     </message>
     <message>
-        <source>Waypointer</source>
-        <translation>Repère</translation>
-    </message>
-    <message>
         <source>Save</source>
         <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <source>Waypointer</source>
+        <translation>Repère</translation>
     </message>
     <message>
         <source>Custom text</source>
@@ -98,12 +98,20 @@
         <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
         <translation>Si sélectionné, aucune confirmation ne s&apos;affichera avant que le dernier repère ne soit enlevé avec le bouton d&apos;annulation</translation>
     </message>
+    <message>
+        <source>Minimum horizontal accuracy</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>harbour-waypointer</name>
     <message>
         <source>Nothing logged</source>
         <translation>Aucun enregistrement</translation>
+    </message>
+    <message>
+        <source>Accuracy: %1 m</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

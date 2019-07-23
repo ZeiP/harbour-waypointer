@@ -103,6 +103,11 @@
         <translation>Tallenna</translation>
     </message>
     <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="21"/>
+        <source>Disabled</source>
+        <translation>Pois käytöstä</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/SettingsPage.qml" line="22"/>
         <source>Minimum horizontal accuracy</source>
         <translation>Vähimmäistarkkuus sijainnille</translation>

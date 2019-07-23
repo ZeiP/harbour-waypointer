@@ -56,7 +56,7 @@ ApplicationWindow
         var locationAccuracy = positionSource.position.horizontalAccuracy;
         var accuracyText = (locationAccuracy == -1 ? "—" : locationAccuracy.toFixed(2));
         locationAccuracyText = qsTr("Accuracy: %1 m").arg(accuracyText)
-        if (locationAccuracy >= 0 && locationAccuracy < settings.horizontalAccuracyLimit) {
+        if (settings.horizontalAccuracyLimit == 0 || (locationAccuracy >= 0 && locationAccuracy < settings.horizontalAccuracyLimit)) {
             console.log("Valid")
             return true;
         }

@@ -14,11 +14,11 @@ Dialog {
             Slider {
                 id: horizontalAccuracyLimitField
                 width: parent.width
-                minimumValue: 1
+                minimumValue: 0
                 maximumValue: 100
                 value: settings.horizontalAccuracyLimit
                 stepSize: 1
-                valueText: value + " m"
+                valueText: (value == 0 ? qsTr("Disabled") : value + " m")
                 label: qsTr("Minimum horizontal accuracy")
             }
             TextArea {

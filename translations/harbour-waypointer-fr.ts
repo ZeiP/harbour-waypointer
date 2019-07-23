@@ -102,6 +102,10 @@
         <source>Minimum horizontal accuracy</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>harbour-waypointer</name>

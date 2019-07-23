@@ -100,11 +100,11 @@
     </message>
     <message>
         <source>Minimum horizontal accuracy</source>
-        <translation type="unfinished"></translation>
+        <translation>Précision horizontale minimale</translation>
     </message>
     <message>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Désactivée</translation>
     </message>
 </context>
 <context>
@@ -115,7 +115,7 @@
     </message>
     <message>
         <source>Accuracy: %1 m</source>
-        <translation type="unfinished"></translation>
+        <translation>Précision : %1m</translation>
     </message>
 </context>
 </TS>

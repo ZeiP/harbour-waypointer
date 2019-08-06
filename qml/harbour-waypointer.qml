@@ -65,4 +65,8 @@ ApplicationWindow
             return false;
         }
     }
+
+    Component.onDestruction: {
+        positionSource.stop();
+    }
 }

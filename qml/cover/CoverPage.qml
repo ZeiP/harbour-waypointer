@@ -24,7 +24,9 @@ CoverBackground {
         CoverAction {
             iconSource: "image://theme/icon-cover-new"
             onTriggered: {
-                pageStack.push(Qt.resolvedUrl("../pages/CustomNotePage.qml"), {coordinate: positionSource.position.coordinate});
+                if (locationValid()) {
+                    pageStack.push(Qt.resolvedUrl("../pages/CustomNotePage.qml"), {coordinate: positionSource.position.coordinate});
+                }
                 mainWindow.activate();
             }
         }

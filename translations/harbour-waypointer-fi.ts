@@ -76,7 +76,7 @@
         <translation>Muu teksti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoggingPage.qml" line="74"/>
+        <location filename="../qml/pages/LoggingPage.qml" line="75"/>
         <source>Cancel last</source>
         <translation>Peru viimeisin</translation>
     </message>
@@ -113,22 +113,22 @@
         <translation>Vähimmäistarkkuus sijainnille</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="27"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="33"/>
         <source>Preset texts one per line</source>
         <translation>Esivalintatekstit yksi riviä kohden</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="28"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="34"/>
         <source>Preset texts one per line. The buttons are usually best aligned with an even number of presets.</source>
         <translation>Esivalintatekstit yksi riviä kohden. Painikkeet asettuvat yleensä parhaiten näytölle, kun niitä on parillinen määrä.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="34"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="27"/>
         <source>Don&apos;t confirm before cancel</source>
         <translation>Älä vahvista peruuttamista</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="35"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="28"/>
         <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
         <translation>Ei vahvistusta ennen viimeisimmän reittipisteen poistamista</translation>
     </message>

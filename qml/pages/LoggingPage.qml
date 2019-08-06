@@ -66,6 +66,7 @@ Page {
                 Button {
                     id: btnCustomText
                     text: qsTr("Custom text")
+                    enabled: false
                     onClicked: {
                         pageStack.push(Qt.resolvedUrl("CustomNotePage.qml"), {coordinate: positionSource.position.coordinate})
                     }
@@ -85,7 +86,7 @@ Page {
 
                 Repeater {
                     id: btnRepeater
-                    model: rootTexts;
+                    model: rootTexts
 
                     Button {
                         text: model.text
@@ -97,6 +98,11 @@ Page {
 
                     Component.onCompleted: {
                         rootTexts.updateValues();
+                        setStatuses(false);
+                    }
+
+                    onItemAdded: {
+                        setStatuses(lastEnabledStatus);
                     }
 
                     function setStatuses(status) {

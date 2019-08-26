@@ -14,7 +14,7 @@ public:
     Q_INVOKABLE QString addWaypoint(QString description, QGeoCoordinate pos);
     Q_INVOKABLE QString removeLastWaypoint();
     Q_INVOKABLE QString getLastlog();
-    Q_INVOKABLE bool saveWaypoints(QString name);
+    Q_INVOKABLE bool saveWaypoints(QString name, QDateTime launchedTime);
 
 signals:
 //    void error(const QString& msg);

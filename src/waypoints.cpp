@@ -40,28 +40,23 @@ QString Waypoints::getLastlog() {
   return waypoint.name + "@" + waypoint.time.toString("hh.mm.ss");
 }
 
-bool Waypoints::saveWaypoints(QString name) {
+bool Waypoints::saveWaypoints(QString name, QDateTime launchedTime) {
     // Used the Rena save code (GPLv3)
     // https://github.com/Simoma/rena/blob/master/src/trackrecorder.cpp
-    QString homeDir = QStandardPaths::writableLocation(QStandardPaths::HomeLocation);
-    QString subDir = "Waypointer";
-    QString filename;
-    filename = waypoints.at(0).time.toString(Qt::ISODate) + " - " + name + ".gpx";
-    qDebug()<<"File:"<<homeDir<<"/"<<subDir<<"/"<<filename;
+    // enhanced with some logic from Recorder save code (GPLv3)
+    // https://github.com/cornedor/sailfish-recorder/blob/master/src/recorder.cpp
+    QString defaultStoragePath = QDir::homePath().append("/Documents/waypointer");
+    QString filename = launchedTime.toString(Qt::ISODate) + " - " + name + ".gpx";
 
-    QDir home = QDir(homeDir);
-    if(!home.exists(subDir)) {
-        qDebug()<<"Directory does not exist, creating";
-        if(home.mkdir(subDir)) {
-            qDebug()<<"Directory created";
-        } else {
-            qDebug()<<"Directory creation failed, aborting";
-            return false;
-        }
+    QDir location(defaultStoragePath);
+    if(!location.exists() && !location.mkpath("."))
+    {
+        qDebug()<<"Creating storage path failed, aborting";
+        return false;
     }
 
     QSaveFile file;
-    file.setFileName(homeDir + "/" + subDir + "/" + filename);
+    file.setFileName(defaultStoragePath + "/" + filename);
     if(!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         qDebug()<<"File opening failed, aborting";
         return false;
@@ -93,12 +88,5 @@ bool Waypoints::saveWaypoints(QString name) {
     xml.writeEndDocument();
 
     file.commit();
-    if(file.error()) {
-        qDebug()<<"Error in writing to a file";
-        qDebug()<<file.errorString();
-    } else {
-        QDir renaDir = QDir(homeDir + "/" + subDir);
-        renaDir.remove("Autosave");
-    }
-  return true;
+    return true;
 }

@@ -141,7 +141,7 @@
         <translation>Ei merkintöjä</translation>
     </message>
     <message>
-        <location filename="../qml/harbour-waypointer.qml" line="58"/>
+        <location filename="../qml/harbour-waypointer.qml" line="59"/>
         <source>Accuracy: %1 m</source>
         <translation>Tarkkuus: %1 m</translation>
     </message>

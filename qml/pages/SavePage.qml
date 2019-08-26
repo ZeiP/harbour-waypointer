@@ -29,7 +29,7 @@ Dialog {
     onDone: {
         if (result == DialogResult.Accepted) {
             saveName = nameField.text;
-            waypoints.saveWaypoints(nameField.text);
+            waypoints.saveWaypoints(nameField.text, mainWindow.launchedTime);
         }
     }
 }

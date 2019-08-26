@@ -17,6 +17,7 @@ ApplicationWindow
     property string lastLog: qsTr("Nothing logged");
     property string saveName;
     property string locationAccuracyText;
+    property var launchedTime;
 
     ListModel {
         id: rootTexts
@@ -64,6 +65,10 @@ ApplicationWindow
             console.log("Invalid")
             return false;
         }
+    }
+
+    Component.onCompleted: {
+        launchedTime = new Date()
     }
 
     Component.onDestruction: {

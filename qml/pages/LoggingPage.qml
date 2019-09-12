@@ -7,7 +7,7 @@ Page {
     // The effective value will be restricted by ApplicationWindow.allowedOrientations
     allowedOrientations: Orientation.All
 
-    property bool lastEnabledStatus: true;
+    property bool lastEnabledStatus: false;
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {

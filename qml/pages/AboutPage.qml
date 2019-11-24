@@ -17,7 +17,7 @@ Page {
             spacing: Theme.paddingLarge
 
             PageHeader {
-                title: qsTr("About")// "+appName)
+                title: qsTr("About")//+" "+appName
             }
             Image {
                 id: icon
@@ -96,6 +96,7 @@ Page {
             Label {
                 text: '<ul>'
                     + '<li>Finnish, Francais - Jyri-Petteri Paloposki </li>'
+                   + '<li>Francais - Quentí</li>'
                     + '</ul>'
                 textFormat: Text.RichText
                 wrapMode: Text.WordWrap

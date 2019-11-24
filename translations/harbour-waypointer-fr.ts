@@ -116,47 +116,6 @@
     </message>
 </context>
 <context>
-    <name>SettingsPage</name>
-    <message>
-        <source>Save</source>
-        <translation>Enregistrer</translation>
-    </message>
-    <message>
-        <source>Don&apos;t confirm before cancel</source>
-        <translation>Ne pas confirmer avant annulation</translation>
-    </message>
-    <message>
-        <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
-        <translation>Si sélectionné, aucune confirmation ne s&apos;affichera avant que le dernier repère ne soit enlevé avec le bouton d&apos;annulation</translation>
-    </message>
-    <message>
-        <source>Disabled</source>
-        <translation>Désactivée</translation>
-    </message>
-    <message>
-        <source>AutoIncrement Names</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A Button with N++ will increment each time it is pressed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Minimum horizontal accuracy to enable capture</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>One button per line. 
-N++ will auto-increment eg Tree-1++</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>One per line.
- The buttons are usually best aligned with an even number of presets.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>harbour-waypointer</name>
     <message>
         <source>Nothing logged</source>

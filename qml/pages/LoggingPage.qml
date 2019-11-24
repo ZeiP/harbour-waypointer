@@ -30,7 +30,11 @@ Page {
 
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            bottomMargin: page.isPortrait ? lastWayPointPanel.height : lastLogLabel.height
+        }
+        clip: lastWayPointPanel.expanded  //if we ever hide it...
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
@@ -149,27 +153,40 @@ Page {
                     }
                 }
             }
-                SectionHeader {
-                    text: "Last Waypoint"
-                }
 
-            Row {
-                x: Theme.horizontalPageMargin
-                spacing: 20
-
-                Label {
-                    id: lastLogLabel
-                    text: mainWindow.lastLog
-                    color: Theme.highlightColor
-                    font.pixelSize: Theme.fontSizeMedium
-                }
-                Label {
-                    id: locationAccuracyLabel
-                    text: mainWindow.locationAccuracyText
-                    color: Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeSmall
-                }
-            }
         }
     }
+    DockedPanel {  //to keep Last Logged at bottom (page.footer ,if QT ever moves to 5.7)
+        id: lastWayPointPanel
+        dock: Dock.Bottom
+        width: page.isPortrait ? parent.width : parent.width
+        height: page.isPortrait ? Theme.itemSizeMedium  : lastLogLabel.height //thin in landscape
+        open:true
+
+        SectionHeader {
+            anchors.top: page.isPortrait ? parent.top : undefined
+            anchors.bottom: page.isPortrait ? undefined : parent.bottom
+            text: qsTr("Last Waypoint")
+        }
+        Row {
+            x: Theme.horizontalPageMargin
+            spacing: 20
+            anchors.bottom: parent.bottom
+
+            Label {
+                id: lastLogLabel
+                text: mainWindow.lastLog
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeMedium
+            }
+            Label {
+                id: locationAccuracyLabel
+                text: mainWindow.locationAccuracyText
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeSmall
+            }
+        }
+
+        }
+
 }

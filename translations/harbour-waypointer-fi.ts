@@ -144,56 +144,6 @@
     </message>
 </context>
 <context>
-    <name>SettingsPage</name>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="13"/>
-        <source>Save</source>
-        <translation>Tallenna</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="29"/>
-        <source>Disabled</source>
-        <translation>Pois käytöstä</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="53"/>
-        <source>AutoIncrement Names</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="54"/>
-        <source>A Button with N++ will increment each time it is pressed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="35"/>
-        <source>Don&apos;t confirm before cancel</source>
-        <translation>Älä vahvista peruuttamista</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="30"/>
-        <source>Minimum horizontal accuracy to enable capture</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="36"/>
-        <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
-        <translation>Ei vahvistusta ennen viimeisimmän reittipisteen poistamista</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="44"/>
-        <source>One button per line. 
-N++ will auto-increment eg Tree-1++</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="46"/>
-        <source>One per line.
- The buttons are usually best aligned with an even number of presets.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>harbour-waypointer</name>
     <message>
         <location filename="../qml/harbour-waypointer.qml" line="17"/>

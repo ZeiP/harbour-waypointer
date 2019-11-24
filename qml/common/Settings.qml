@@ -6,7 +6,8 @@ ConfigurationGroup {
 
     path: "/apps/harbour-waypointer"
 
-    property string values
+    property string presets
     property bool noConfirmCancel
     property int horizontalAccuracyLimit
+    property bool autoIncrementNames : true
 }

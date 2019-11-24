@@ -9,6 +9,25 @@ Page {
 
     property bool lastEnabledStatus: false;
 
+    function updateIDString(button,MatchAtEndOnly) {
+      var iN=button.text.search(/\d+\+\+$/); //match NNN++ at end first
+      if (!(iN>0) && (!MatchAtEndOnly)) {
+          iN=button.text.search(/\d+\+\+/); //match NNN++ elsewhere if not at end
+        };
+      if (iN>0) { //if match that needs incrementing then...
+            var str=button.text;
+            var S=str.slice(iN,str.length);
+            var iN2= S.search(/\+\+/); //in2 is end of number
+            S = S.slice(0,S.search(/\+\+/)); //just number
+            var N=parseInt(S)+1;
+            button.text = str.slice(0,iN)+N+str.slice(iN+iN2);
+            return str.slice(0,iN)+N+str.slice(iN+iN2+2);
+          //and update the list??
+        } else {
+            return button.text;
+        }
+    }
+
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
         anchors.fill: parent
@@ -83,16 +102,28 @@ Page {
                         }
                     }
                 }
+            }
+                SectionHeader {
+                    text: "Presets"
+                }
+                ButtonLayout {
 
                 Repeater {
                     id: btnRepeater
                     model: rootTexts
 
                     Button {
-                        text: model.text
+                        text: model.text.length===0 ? "<new preset>" : model.text
                         width: parent.width
+
                         onClicked: {
-                            lastLog = waypoints.addWaypoint(this.text, positionSource.position.coordinate);
+                            if (text === "<new preset>") {
+                              pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+                            } else {
+
+                            var PointName=updateIDString(this,false);
+                            lastLog = waypoints.addWaypoint(PointName, positionSource.position.coordinate);
+                            }
                         }
                     }
 
@@ -113,6 +144,9 @@ Page {
                     }
                 }
             }
+                SectionHeader {
+                    text: "Last Waypoint"
+                }
 
             Row {
                 x: Theme.horizontalPageMargin

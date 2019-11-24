@@ -2,6 +2,41 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Released under GPLv3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please Donate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> if you like this application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Report Issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translations can be done in </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CancelConfirmation</name>
     <message>
         <source>Remove last waypoint</source>
@@ -64,6 +99,10 @@
         <source>Cancel last</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SavePage</name>
@@ -83,15 +122,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Preset texts one per line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Don&apos;t confirm before cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Preset texts one per line. The buttons are usually best aligned with an even number of presets.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -99,11 +130,29 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Minimum horizontal accuracy</source>
+        <source>Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Disabled</source>
+        <source>AutoIncrement Names</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A Button with N++ will increment each time it is pressed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Minimum horizontal accuracy to enable capture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>One button per line. 
+N++ will auto-increment eg Tree-1++</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>One per line.
+ The buttons are usually best aligned with an even number of presets.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

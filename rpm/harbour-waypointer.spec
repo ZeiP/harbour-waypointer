@@ -7,6 +7,7 @@ Name:       harbour-waypointer
 
 # >> macros
 # << macros
+# when bumping Version, also change APP_VERSION in harbour-waypointer.cpp
 
 Summary:    Waypointer
 Version:    0.5.5

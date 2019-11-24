@@ -4,6 +4,7 @@
 
 #include <sailfishapp.h>
 #include "waypoints.h"
+#define APP_VERSION "0.5.5"
 
 int main(int argc, char *argv[])
 {
@@ -20,6 +21,8 @@ int main(int argc, char *argv[])
 
     Waypoints *waypoints = new Waypoints();
     v->rootContext()->setContextProperty("waypoints", waypoints);
+    v->rootContext()->setContextProperty("appName", "WayPointer");
+    v->rootContext()->setContextProperty("appVersion", APP_VERSION);
 
     // Start the application.
     v->setSource(SailfishApp::pathTo("qml/harbour-waypointer.qml"));

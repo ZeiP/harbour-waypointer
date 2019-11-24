@@ -2,6 +2,49 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fi_FI">
 <context>
+    <name>AboutPage</name>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="20"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="39"/>
+        <source>Released under GPLv3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="46"/>
+        <source> if you like this application</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="46"/>
+        <source>Please Donate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="63"/>
+        <source>View Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="69"/>
+        <source>Report Issue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="76"/>
+        <source>Translate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="79"/>
+        <source>Translations can be done in </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CancelConfirmation</name>
     <message>
         <location filename="../qml/pages/CancelConfirmation.qml" line="10"/>
@@ -56,27 +99,32 @@
 <context>
     <name>LoggingPage</name>
     <message>
-        <location filename="../qml/pages/LoggingPage.qml" line="19"/>
+        <location filename="../qml/pages/LoggingPage.qml" line="38"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/LoggingPage.qml" line="43"/>
         <source>Settings</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoggingPage.qml" line="23"/>
+        <location filename="../qml/pages/LoggingPage.qml" line="47"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoggingPage.qml" line="62"/>
+        <location filename="../qml/pages/LoggingPage.qml" line="86"/>
         <source>Waypointer</source>
         <translation>Waypointer</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoggingPage.qml" line="68"/>
+        <location filename="../qml/pages/LoggingPage.qml" line="92"/>
         <source>Custom text</source>
         <translation>Muu teksti</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoggingPage.qml" line="75"/>
+        <location filename="../qml/pages/LoggingPage.qml" line="99"/>
         <source>Cancel last</source>
         <translation>Peru viimeisin</translation>
     </message>
@@ -98,39 +146,51 @@
 <context>
     <name>SettingsPage</name>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="12"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="13"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="21"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="29"/>
         <source>Disabled</source>
         <translation>Pois käytöstä</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="22"/>
-        <source>Minimum horizontal accuracy</source>
-        <translation>Vähimmäistarkkuus sijainnille</translation>
+        <location filename="../qml/pages/SettingsPage.qml" line="53"/>
+        <source>AutoIncrement Names</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="33"/>
-        <source>Preset texts one per line</source>
-        <translation>Esivalintatekstit yksi riviä kohden</translation>
+        <location filename="../qml/pages/SettingsPage.qml" line="54"/>
+        <source>A Button with N++ will increment each time it is pressed</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="34"/>
-        <source>Preset texts one per line. The buttons are usually best aligned with an even number of presets.</source>
-        <translation>Esivalintatekstit yksi riviä kohden. Painikkeet asettuvat yleensä parhaiten näytölle, kun niitä on parillinen määrä.</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="27"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="35"/>
         <source>Don&apos;t confirm before cancel</source>
         <translation>Älä vahvista peruuttamista</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingsPage.qml" line="28"/>
+        <location filename="../qml/pages/SettingsPage.qml" line="30"/>
+        <source>Minimum horizontal accuracy to enable capture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="36"/>
         <source>If selected, no confirmation will be shown before the last waypoint is removed with the cancel button</source>
         <translation>Ei vahvistusta ennen viimeisimmän reittipisteen poistamista</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="44"/>
+        <source>One button per line. 
+N++ will auto-increment eg Tree-1++</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SettingsPage.qml" line="46"/>
+        <source>One per line.
+ The buttons are usually best aligned with an even number of presets.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

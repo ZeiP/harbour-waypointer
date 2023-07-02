@@ -9,12 +9,40 @@ Page {
 
     property bool lastEnabledStatus: false;
 
+    function updateIDString(button,MatchAtEndOnly) {
+      var iN=button.text.search(/\d+\+\+$/); //match NNN++ at end first
+      if (!(iN>0) && (!MatchAtEndOnly)) {
+          iN=button.text.search(/\d+\+\+/); //match NNN++ elsewhere if not at end
+        };
+      if (iN>0) { //if match that needs incrementing then...
+            var str=button.text;
+            var S=str.slice(iN,str.length);
+            var iN2= S.search(/\+\+/); //in2 is end of number
+            S = S.slice(0,S.search(/\+\+/)); //just number
+            var N=parseInt(S)+1;
+            button.text = str.slice(0,iN)+N+str.slice(iN+iN2);
+            return str.slice(0,iN)+N+str.slice(iN+iN2+2);
+          //and update the list??
+        } else {
+            return button.text;
+        }
+    }
+
     // To enable PullDownMenu, place our content in a SilicaFlickable
     SilicaFlickable {
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            bottomMargin: page.isPortrait ? lastWayPointPanel.height : lastLogLabel.height
+        }
+        clip: lastWayPointPanel.expanded  //if we ever hide it...
 
         // PullDownMenu and PushUpMenu must be declared in SilicaFlickable, SilicaListView or SilicaGridView
         PullDownMenu {
+            MenuItem {
+                text: qsTr("About")
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
+
             MenuItem {
                 text: qsTr("Settings")
                 onClicked: pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
@@ -83,16 +111,28 @@ Page {
                         }
                     }
                 }
+            }
+                SectionHeader {
+                    text: "Presets"
+                }
+                ButtonLayout {
 
                 Repeater {
                     id: btnRepeater
                     model: rootTexts
 
                     Button {
-                        text: model.text
+                        text: model.text.length===0 ? "<new preset>" : model.text
                         width: parent.width
+
                         onClicked: {
-                            lastLog = waypoints.addWaypoint(this.text, positionSource.position.coordinate);
+                            if (text === "<new preset>") {
+                              pageStack.push(Qt.resolvedUrl("SettingsPage.qml"))
+                            } else {
+
+                            var PointName=updateIDString(this,false);
+                            lastLog = waypoints.addWaypoint(PointName, positionSource.position.coordinate);
+                            }
                         }
                     }
 
@@ -114,23 +154,39 @@ Page {
                 }
             }
 
-            Row {
-                x: Theme.horizontalPageMargin
-                spacing: 20
-
-                Label {
-                    id: lastLogLabel
-                    text: mainWindow.lastLog
-                    color: Theme.highlightColor
-                    font.pixelSize: Theme.fontSizeMedium
-                }
-                Label {
-                    id: locationAccuracyLabel
-                    text: mainWindow.locationAccuracyText
-                    color: Theme.secondaryColor
-                    font.pixelSize: Theme.fontSizeSmall
-                }
-            }
         }
     }
+    DockedPanel {  //to keep Last Logged at bottom (page.footer ,if QT ever moves to 5.7)
+        id: lastWayPointPanel
+        dock: Dock.Bottom
+        width: page.isPortrait ? parent.width : parent.width
+        height: page.isPortrait ? Theme.itemSizeMedium  : lastLogLabel.height //thin in landscape
+        open:true
+
+        SectionHeader {
+            anchors.top: page.isPortrait ? parent.top : undefined
+            anchors.bottom: page.isPortrait ? undefined : parent.bottom
+            text: qsTr("Last Waypoint")
+        }
+        Row {
+            x: Theme.horizontalPageMargin
+            spacing: 20
+            anchors.bottom: parent.bottom
+
+            Label {
+                id: lastLogLabel
+                text: mainWindow.lastLog
+                color: Theme.highlightColor
+                font.pixelSize: Theme.fontSizeMedium
+            }
+            Label {
+                id: locationAccuracyLabel
+                text: mainWindow.locationAccuracyText
+                color: Theme.secondaryColor
+                font.pixelSize: Theme.fontSizeSmall
+            }
+        }
+
+        }
+
 }

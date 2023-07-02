@@ -22,7 +22,7 @@ ApplicationWindow
     ListModel {
         id: rootTexts
         function updateValues() {
-            var values = settings.values.split("\n");
+            var values = settings.presets.split("\n");
 
             rootTexts.clear();
             for(var i = 0; i < values.length; i++) {

@@ -37,7 +37,7 @@ QString Waypoints::getLastlog() {
   waypoint waypoint;
   waypoint = waypoints.last();
 
-  return waypoint.name + "@" + waypoint.time.toString("hh.mm.ss");
+  return waypoint.name + "@" + waypoint.time.toString("hh:mm:ss");
 }
 
 bool Waypoints::saveWaypoints(QString name, QDateTime launchedTime) {
